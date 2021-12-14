@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> title </title>
+
+    <script>
+        //주의
+        //기존의 웹페이지에 내용이 있는 상태에서 
+        //document.write()가 실행되면 먼저 로딩이된 데이터를 지우고
+        //새로운 데이터로 출력된다.
+        //document.write("HELLO?");
+        document.write(3*4);
+        document.write("<br>Hello");
+
+        
+    </script>
+</head>
+<body>
+    <button onclick="document.write('test')"> 버튼</button>
+</body>
+</html>
