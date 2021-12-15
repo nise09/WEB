@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <div id="tmp"></div>
+    
+    <script>
+
+        //기본 if문
+        // var num1= prompt("첫번째 입력");
+        // num1 = parseInt(num1);
+        // var num2= prompt("두번째 입력");
+        // num2 = parseInt(num2);
+        
+        // if(num1 > num2) {
+        //     document.write("큰수 : " +num1);
+            
+        // }
+        // else {
+        //     document.write("큰수 : " +num2);
+
+        // }
+
+        //else if문
+        //국영수 점수를 받아서 총점이 60점이상이고 각부분 점수가 40점 이상일때
+        //합격을 출력 그게 아니라면 불합격
+
+        
+
+        var kr=prompt("국어 점수를 입력하세요");
+        kr = parseInt(kr);
+        var mt=prompt("수학 점수를 입력하세요");
+        mt = parseInt(mt);
+        var eng=prompt("영어 점수를 입력하세요");
+        eng = parseInt(eng);
+
+        all=(kr+mt+eng)
+
+        if(all>=60 && kr>=40 && mt>=40 && eng>=40 ) {
+            document.getElementById('tmp').innerHTML="합격 되었습니다.";    
+        }
+        else if(all<60 || kr<40 || mt<40 || eng<40) {
+            document.getElementById('tmp').innerHTML="불합격 되었습니다.";
+        }
+
+
+    </script>
+
+</body>
+</html>

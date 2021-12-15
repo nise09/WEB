@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <div>Name: <span id="name"></span></div>
+    <div>Age: <span id="age"></span></div>
+    <div>Height: <span id="height"></span></div>
+    <div>Weight: <span id="weight"></span></div>
+    <div>ADDR: <span id="addr"></span></div>
+    <button onclick="Person.toString()">ToString()</button>
+
+    <script>
+        //delete연산자 : 속성멤버제거에 사용 
+
+        var Person = {
+            name:"홍길동",
+            age : 40,
+            height:166.7,
+            weight:70,
+            addr: "대구",
+            gender: "M",
+            toString: function() {
+                alert(
+                    "name: "+ this.name +
+                    ", age: "+this.age +
+                    ", height: "+this.height +
+                    ", weight: "+this.weight +
+                    ", addr: "+this.addr +
+                    ", gender: "+this.gender 
+                )
+            },
+            talk: function() {
+                document.write(this.name + "님이 말합니다 <br>")
+            }
+        }
+
+        document.getElementById('name').innerHTML=Person.name;
+        document.getElementById('age').innerHTML=Person.age;
+        document.getElementById('height').innerHTML=Person.height;
+        document.getElementById('weight').innerHTML=Person.weight;
+        document.getElementById('addr').innerHTML=Person.addr;
+
+
+        // // delete Person.age;
+        // delete Person.talk;
+        // // Person.toString();
+        // Person.talk();
+
+
+            //delete 배열 요소 제거
+
+            // arr = [1,2,3];
+         
+            // delete arr[1];
+            // document.write(arr+"<br>");
+           
+            // document.write(typeof arr[0]+"<br>");
+            // document.write(typeof arr[1]+"<br>");
+            // document.write(typeof arr[2]+"<br>");
+            // document.write(arr.length);
+
+            //다음 span 태그 person의 멤버 값들을 각각 넣어보세요
+    </script>
+</body>
+</html>
