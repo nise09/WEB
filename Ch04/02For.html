@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        i=0;
+        while(i<5) {
+            document.write("i : " + i + "<br>");
+            i++;
+        }
+        document.write("<hr>");
+
+        for(x=0; x<5; x++) {
+            document.write("x : " + x + "<br>");
+        }
+
+        //1부터 입력한 수까지의 합 
+        //구구단 출력
+        //테이블 행렬 입력 받아서 만들기
+
+        document.write("<hr>");
+
+        var arr = [10,11,12,13,14,15];
+
+        for(i=0; i<arr.length; i++){
+            document.write(arr[i]+" ");
+        }
+        document.write("<hr>");
+
+
+        //for in문 arr 배열 안(in)에 꺼내오기
+        for(val in arr) {
+            document.write(arr[val]+ " ");
+        }
+        
+        document.write("<hr>");
+
+        person = {name:"홍길동",  age:30, job:"개발자"};
+
+        document.write(person.name);
+        document.write("<hr>");
+
+        //i에는 name , age , job 순서대로 전달된다
+        for(i in person){
+            document.write(person[i]+" ");
+        }
+
+        
+    </script>
+
+
+    
+     
+</body>
+</html>

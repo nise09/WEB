@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ctd{
+            width: 100%;
+            border: none;
+        }
+
+    </style>
+</head>
+<body>
+    <!--//테이블 행과 열의수를 받아서 테이블을 생성해보세요
+    //boarder 1px solid gray; width:15px; height:15px;로 처리합니다
+    //각 셀에 1부터 하나씩 증가된 값이 셀마다 표시가 되어야합니다.
+    -->
+    <style>
+        .atd{
+            border:1px solid gray; width:15px; height:15px;
+            
+        }
+    </style>
+    <script>
+        // function func(trow,tcol){
+        //     var i = 0;
+            
+        //     var trow=document.getElementById(trow).value;
+        //     var tcol=document.getElementById(tcol).value;
+            
+        //     document.write("<table style='boarder 1px solid gray; width:15px; height:15px' >")
+        //     while(i<=trow){
+        //         document.write("<tr>")
+        //         document.write(i)
+        //             while(i<=tcol){
+        //                 document.write("<td>")
+        //                 document.write(i)
+        //                 document.write("</td>")
+        //                 i++;
+        //             }
+        //         document.write("</tr>")
+        //         i++;
+        //     }
+        //     document.write("</table>")
+        //     while(i<=trow){
+        //     console.log(trow,tcol);
+          
+        // }
+
+        function func(r,c) {
+
+            var row = document.getElementById(r).value;
+            var col = document.getElementById(c).value;
+            cnt=1;
+
+            i=0;
+            j=0;
+
+            document.write("<table>")
+            while(i<row) {
+                document.write("<tr>")
+                j=0;
+                while(j<col) {
+
+                    document.write("<td class=atd><input class='ctd' value="+(cnt++)+"></td>")
+                    j++;
+                }
+                document.write("</tr>")
+
+                i++;
+            }
+
+            document.write("</table>")
+            
+        }
+
+    </script>
+
+    행 : <input type="text" id="trow"> <br>
+    열 : <input type="text" id="tcol"> <br>
+    <button onclick="func('trow','tcol')">출력</button>
+    
+    
+</body>
+    
+</body>
+</html>
