@@ -12,10 +12,16 @@
         // 1부터 입력받은 수까지 입출력(document.write())
 
         function next(first){
+            
+            var i=1;
+            var first = document.getElementById(first).value;
+            console.log(first);
+            while(i<=first){
 
-           var i=1;
-           
-
+                document.write(i);
+                document.write("<br>");
+                i++;
+            }
         }
 
 
@@ -26,9 +32,29 @@
         // 5x9 =45
         // 5x8 =40
         // ...
+        
+        function next2(second) {
+
+            var j = 9;
+            var second= document.getElementById(second).value;
+            console.log(j);
+            console.log(second);
+            while(1<=j){
+                document.write(second +" x "+j +" = "+ (second*j));
+                j--;
+            }
+        }
+
+       
 
         // 03
         // 모든구구단 출력(2단부터 9단까지)
+        function next3() {
+
+            var x =1;
+            var y =1;
+
+        }
 
         // 04 별찍기
         // *
@@ -44,9 +70,23 @@
     <section>
         <h3>01.</h3><br>
         <input type="text" id="num1"/>
-        <button onclick="next(num1)">제출</button>
+        <button onclick="next('num1')">제출</button>
 
     </section>
+
+    <section>
+        <h3>02.</h3>
+        <input type="text" id="num2"/>
+        <button onclick="next2('num2')"> 제출 </button>
+
+    </section>
+
+    <section>
+        <h3>03.</h3>
+        <input type="text" id ="num3" />
+        <button onclick="next3('num3')">구구단 click</button>
+    </section>
+    
     
 </body>
 </html>
