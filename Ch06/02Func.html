@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+
+    <script>
+        // //함수 기본
+        // function sum(num1,num2){    //함수의 헤더  : 함수의 이름, 매개변수형태
+        //     return num1+num2;       //함수의 본체{} : 실제 처리될 로직구현
+        // }                           //변환값, 리턴값, 호출했던 위치로 값전달에 사용
+        // console.log(sum(10,20)); //함수의 호출
+        // console.log(sum(30,40)); //함수의 호출
+        
+        //함수의 네가지형태
+        //매개변수 o , return o - 일반자판기
+        //매개변수 x , return o - 공짜 자판기
+        //매개변수 o , return x - 전등스위치
+        //매개변수 x , return x - ???
+
+
+
+
+        // //매개변수x , return o
+        // function sum() {
+        //     //값 어떻게 받지
+        //     n1 = prompt("값 1 : ");
+        //     n2 = prompt("값 2 : ");
+        //     n1 = parseInt(n1);
+        //     n2 = parseInt(n2);
+        //     return n1+n2;
+        // }
+        // document.write("두수의 합 : " + sum() );
+
+
+
+        //매개변수 o , return x
+
+        // function sum(num1,num2){
+        //     //입력 ok 
+        //     alert(num1+num2); 
+        // }
+        // sum(100,200);
+
+
+        
+        //매개변수 x , return x;
+        function sum() {
+            n1 = prompt("값 1 : ");
+            n2 = prompt("값 2 : ");
+            n1 = parseInt(n1);
+            n2 = parseInt(n2);
+
+            alert(n1 + n2);
+        }
+    </script>
+  
+
+
+    <!-- <script>
+
+        function func(){
+            var tg = document.getElementById("abc");
+            tg.onmouseover = tg.innerHTML("안녕");
+        }
+
+    </script>
+
+    <p style="width:200px; height: 50px; border:1px solid gray;" id="abc" mouserover="func()"></p> -->
+
+</body>
+</html>

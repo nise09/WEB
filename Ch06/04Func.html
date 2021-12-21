@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        //prompt로 리스트 문자열을 5를 입력받아
+        //id가ㅣ insertul태그안에
+        //<ul>
+        //  <li>입력한문자열1</li>
+        //  <li>입력한문자열1</li>
+        //  <li>입력한문자열1</li>
+        //  <li>입력한문자열1</li>
+        //  <li>입력한문자열1</li>
+        //</ul>을 넣어보세요
+
+        function createUL() {
+
+            // var li = prompt(" 갯수를 입력하세요.");
+            // li = parseInt(li);
+            var li= [];
+            for(i=0; i<5; i++) {
+                li[i] = prompt("입력: ");
+            }
+
+            var nextli = document.getElementById("insertul");
+            var cnt =1;
+            
+            var a = "<ul style='list-style=none; width:200px; padding:0px;'>"
+                for(i=0; i<li.length; i++) {
+                    a+="<li style='height:30px; margin:2px 0px; background-color:lightgray;'>"
+                    a+= li[i];
+                    a+="</li>"
+                }
+            a+="</ul>"
+
+            nextli.innerHTML=a;
+
+            
+
+
+        }
+
+    </script>
+    
+    <button onclick="createUL()" >UL 생성</button>
+    <hr>
+    <div id="insertul"></div>
+
+</body>
+</html>
