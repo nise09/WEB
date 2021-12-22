@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <button onclick="addp()"> p태그 추가 </button>
+    <hr>
+    <div id="d1"></div> -->
+    
+    여행하고 싶은 지역 : <input id=txt type="text"><button onclick="addlist('txt')">추가`</button>
+    
+    <ul id="travel">
+        
+    </ul>
+    
+    <script>
+        // function addp() {
+        // //새노드 추가 (createElement() : 요소추가)
+        // ptg=document.createElement("p");
+        // //새노드에 내용입력
+        // ptg.innerHTML="추가P태그!";
+
+        // //기존노드 가져오기
+
+        // d1tg=document.getElementById("d1");
+        // //기존노드에 새노드 연결(appendChild():노드마지막에 연결하기함수)
+        // d1tg.appendChild(ptg);
+        // }
+        
+        function addlist(t) {
+        
+            var t = document.getElementById("txt").value;
+            
+            litg=document.createElement("li");
+
+            litg.innerHTML=t;
+
+            travelli=document.getElementById("travel");
+
+            travelli.appendChild(litg);
+
+           
+        }
+
+
+    </script>
+</body>
+</html>
