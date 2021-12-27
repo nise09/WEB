@@ -14,11 +14,13 @@
 </style>   
 <script>
     i=1;
+    tid=1;
     function addrow(){
         //연결할 테이블 찾기
         tbltg=document.getElementById("tbl");
         //tr생성
         trtg =document.createElement("tr");
+        trtg.id="tr"+(tid);
         //td생성
         td1=document.createElement("td");
         td1.innerHTML=i++;
@@ -27,13 +29,21 @@
         td3=document.createElement("td");
         //삭제버튼 추가
         btn=document.createElement("button");
+        //setAttribute onclick 추가
+        btn.setAttribute('onclick',"remove(tr"+tid+");");
         btn.innerHTML="-";
+        
         //삭제버튼 마지막 td에 연결
         td3.append(btn);
 
         //tr에 td연결하기
         trtg.append(td1,td2,td3);
         tbltg.append(trtg);
+        tid++;
+    }
+
+    function remove(tmp){
+        tmp.remove();
     }
 </script>
 <table id="tbl">
