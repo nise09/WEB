@@ -5,16 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        #f1 {width:150px; height:150px;}
-    </style>
-
 </head>
 <body>
-    <img id="f1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/220px-QR_code_for_mobile_English_Wikipedia.svg.png" />
+    <input type="text" id="testinput"/>
+    <button onclick="Start()">start</button>
 
-    
+    <script>
+        clear=null;
+        ti=document.getElementById("testinput").value;
 
+        function Start() {
+            clear=setInterval(start1, 1000);
+        }
+
+        function start1() {
+            setTimeout(start2,3000);
+
+        }
+        function start2() {
+            console.log(ti);
+            if(ti == 100) {
+                alert("100 입니다.");
+                clearInterval(clear);
+            }else {
+                alert("100이 아닙니다.");
+                clearInterval(clear);
+            }
+        }
+
+    </script>
 
 </body>
 </html>
