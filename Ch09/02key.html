@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- HTML 내의 이벤트속성 사용
+            onkeyup : 키를 눌렸다 뗏을때
+            onkeydown : 키를 눌렸을때
+            onkeypress : 키를 누르고 있을때
+    -->
+
+    <!-- KEYUP : <input  onkeyup="keyup(this)" >
+    <hr>
+    <p id ="result1"></p>
+    <hr>
+
+    KEYDOWN : <input  onkeydown="keydown(this)" >
+    <hr>
+    <p id ="result2"></p>
+    <hr>
+
+    KEYDOWN : <input  onkeypress="keypress(this)" >
+    <hr>
+    <p id ="result3"></p>
+
+
+    <script>
+
+        function keyup() {
+            var result = document.getElementById("result1");
+            // result.innerHTML = event.target.value;
+            result.innerHTML = event.keyCode;
+        }
+
+        function keydown() {
+            var result = document.getElementById("result2");
+            result.innerHTML = event.keyCode;
+        }
+
+        function keypress() {
+            var result = document.getElementById("result3");
+            result.innerHTML = event.keyCode;
+            console.log(event.keyCode);
+        }
+
+        // 이벤트 처리순서
+        // onkeydown 이벤트처리 (Virtual code 값)
+        // onkeypress 이벤트처리 (ASCII code 값)
+        // onkeyup 이벤트처리
+
+
+    </script>
+
+
+
+    <input id='txt' onkeydown="func1()" />
+    <hr>
+    <div id="result"></div>
+
+    <script>
+
+        function func1() {
+            var code = event.keyCode;
+            var dtg=document.getElementById("result");
+            
+
+            if( code == 13 ) {
+                dtg.innerHTML=event.target.value;
+                event.target.value+= event.target.value+"<br>";
+            }
+        }
+    </script> --> 
+
+
+    <!-- 커서이동에 따른 이벤트
+            up : 38
+            down : 40
+            left : 37
+            right : 39 -->
+
+
+            <style>
+                td{width: 30px;height: 30px; background-color:lightgray;}
+                
+            </style>
+        <table>
+            <tr>
+                <td id="0/0"><input/></td>
+                <td id="0/1"><input/></td>
+                <td id="0/2"><input/></td>
+            </tr>
+            <tr>
+                <td id="1/0"><input/></td>
+                <td id="1/1"><input/></td>
+                <td id="1/2"><input/></td>
+            </tr>
+            <tr>
+                <td id="2/0"><input/></td>
+                <td id="2/1"><input/></td>
+                <td id="2/2"><input/></td>
+            </tr>
+
+        </table>
+
+
+        <script>
+            var xpos=1;
+            var ypos=1;
+            var cur=document.getElementById(xpos+"/"+ypos);
+            cur.style.backgroundColor="blue";
+            cur.addEventListener('keydown', function() {
+                var code=event.keyCode;
+
+                if(code==38) {
+                    // 현재 위치 배경색 변경
+                    cur.style.backgroundClip="lightgray";
+
+                    //x측 한칸위로 이동
+
+                    xpos--;
+                    //위로 이동한 요소 찾기
+                    cur = document.getElementById(xpos+"/"+ypos);
+                    //이동한 위치 배경색 변경
+                    cur.style.backgroundColor="blue";
+                }
+
+            })
+
+
+        </script>
+</body>
+</html>

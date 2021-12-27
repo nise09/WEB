@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- HTML 내 이벤트 처리 속성 사용 -->
+
+
+    <!-- <style>
+        p{
+            width: 200px; height: 150px; border:1px solid gray; font-size:32px;
+        }
+    </style>
+
+    <p id="p1" >기본 내용</p> -->
+
+
+    <!-- <script>
+        var p1=document.getElementById("p1");
+
+        function func1() {
+            // alert (event.type+ " " +event.target);
+            event.target.innerHTML="클릭함";
+        }
+        function func2() {
+            event.target.innerHTML="마우스 over";
+        }
+        function func3() {
+            event.target.innerHTML ="마우스 leave"; 
+        } 
+
+    </script> -->
+
+    <!-- javascript event 처리 함수를 사용 -->
+
+    
+    <!-- <script>
+        var p1tg=document.getElementById("p1");
+        p1tg.addEventListener('click',function() {
+            // p1tg.innerHTML="클릭함";
+            event.target.innerHTML ="클릭함"
+        });
+        p1tg.addEventListener('mouseover',function () {
+            event.target.innerHTML = "마우스 over"
+        })
+        p1tg.addEventListener('mouseleave',function() {
+            event.target.innerHTML = "마우스 leave"
+        })
+
+    </script> -->
+
+    <!-- 문제 START -->
+
+    <button id="btn1">버튼1</button> <button id="btn2">버튼2</button>
+    <hr>
+    <div id="result" style="width: 300px; height: 100; border: 1px solid gray;">
+    
+    </div>
+
+
+    <script>
+        // 버튼1을 클릭할때 -> id result에 '버튼1클릭함' 문자열이 들어감
+        // 버튼1을 over할때 -> id result에 '버튼1over' 문자열이 들어감
+        // 버튼1을 leave할때 -> id result에 '버튼1leave' 문자열이 들어감
+        // 버튼2을 클릭할때 -> id result에 '버튼1클릭함' 문자열이 들어감
+        // 버튼2을 클릭할때 -> id result에 '버튼2over' 문자열이 들어감
+        // 버튼2을 클릭할때 -> id result에 '버튼2leave' 문자열이 들어감
+
+        var btn1tg = document.getElementById("btn1");
+        var btn2tg = document.getElementById("btn2");
+        var result1 = document.getElementById("result");
+
+        btn1tg.addEventListener('click',function() {
+            result1.innerHTML="<h1> button click 1 </h1>";
+           
+        })
+        btn1tg.addEventListener('mouseover',function(){
+            
+            result1.innerHTML ="<h1> mouse over 1 </h1>";
+        })
+        btn1tg.addEventListener('mouseleave', function() {
+            result1.innerHTML="<h1> mouse leave 1 <h1> ";
+        })
+
+        
+
+        btn2tg.addEventListener('click',function() {
+            result1.innerHTML="<h1> button click 2 </h1>";
+           
+        })
+        btn2tg.addEventListener('mouseover',function(){
+            
+            result1.innerHTML ="<h1> mouse over 2 </h1>";
+        })
+        btn2tg.addEventListener('mouseleave', function() {
+            result1.innerHTML="<h1> mouse leave 2 </h1>";
+        })
+        
+        
+
+    </script>
+
+
+</body>
+</html>
