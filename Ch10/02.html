@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{margin:0px;}
+        #wrapper1{ width: 100%; height: 1000px; position:relative; top:0px; left:0px;}
+        #modal{display: none;}
+        @keyframes moving{
+            from{left:100%}
+            to{left:38%;}
+        }
+    </style>
+
+    <script>
+        
+        var modal;
+        var newdiv;
+        var z=9999;
+        
+        function openmodal() {
+            
+            
+            var bg=document.getElementById('wrapper1');
+
+            newdiv=document.createElement('div');
+
+            newdiv.style.position='absolute';
+            newdiv.style.top='0px';
+            newdiv.style.left='0px';
+            newdiv.style.backgroundColor='black';
+            newdiv.style.width='100%';
+            newdiv.style.height='1000px';
+            newdiv.style.opacity='0.3';
+
+            bg.appendChild(newdiv);
+
+            modal=document.getElementById('modal');
+            modal.style.position='absolute';
+            modal.style.margin="0 auto";
+            modal.style.left="40%";
+            modal.style.top="30%";
+            modal.style.display="block";
+            modal.style.width='160px';
+            modal.style.height='30px';
+            modal.style.backgroundColor="white";
+            modal.style.zIndex=z+1;
+            modal.style.textAlign='center';
+            modal.style.lineHeight='10px';
+            modal.style.animation='moving';
+            modal.style.transition='2s';
+
+        }
+        function closemodal() {
+            modal.style.display='none';
+
+            newdiv.remove();
+        }
+
+
+    </script>
+
+</head>
+<body>
+
+  
+
+    <div id="wrapper1">
+        <button onclick='openmodal()'>Modal</button>
+        <div id="modal">
+            모달창입니다.
+            <button onclick='closemodal()'>종료</button>
+    
+        </div>
+
+    </div>
+   
+</body>
+</html>
