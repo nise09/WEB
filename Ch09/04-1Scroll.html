@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{ margin:0px; height: 5000px;}
+        nav{
+            height:26px; background-color: black; margin-bottom: 5px;
+            display:flex;
+            padding:5px;
+        }
+        nav > div {
+            width: 100%; border : 1px solid gray;
+            font-size: 16px;
+            font-weight: bold;
+            color:white;
+            text-align: center;
+        }
+        button {
+            position:fixed;
+            color: white;
+            background-color: black;
+        }
+        #header-meta{height:30px; background-color:wheat; margin-bottom: 30px;}
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header-meta">
+        </div>
+        <nav id="ntg">
+            <div>best</div>
+            <div>new</div>
+            <div>outer</div>
+            <div>suit</div>
+            <div>tee/top</div>
+        </nav>
+
+        <button onclick="ft()">맨위로</button>
+    </div>
+
+    <script>
+        document.addEventListener('scroll', function() {
+            var pos= document.documentElement.scrollTop;
+            var nt = document.getElementById("ntg");
+
+            if(pos >=30) {
+                nt.style.position='fixed';
+                nt.style.left='0px';
+                nt.style.top='0px';
+                nt.style.width='30%';
+            }
+            else {
+                nt.style.width='100%';
+                nt.style.position='static';
+            }
+
+        })
+        
+        function ft() {
+            var pos = document.documentElement.scrollTop;
+            var nt = document.getElementById("ntg");
+
+            nt.style.width='100%';
+            
+        }
+
+    </script>
+    
+</body>
+</html>
