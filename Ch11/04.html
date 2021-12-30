@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+        
+        여행하고 싶은지역 : <input id=txt><button id = "add" onclick="addList()">추가</button>
+
+        <ul id=travel>
+
+        </ul>
+    
+
+    <script>
+
+        // function addList(){
+        //         //1 id txt인 요소의 입력된 값을 저장
+        //         txttg=document.getElementById("txt");
+
+        //         //2 id travel인 요소를 찾기
+        //         ultg=document.getElementById("travel");
+
+        //         //3 새노드 생성(li)
+        //         litg=document.createElement("li");
+
+        //         //4 새노드에 id txt의 값을 innerHTML 로 삽입
+        //         litg.innerHTML=txttg.value;
+        //         //5 id travel의 append 하기 
+        //         ultg.appendChild(litg);
+        //         //6 txt box 초기화
+        //         txttg.value="";
+        //     }
+        //JQ
+
+     
+       
+        $('#add').click(function(){
+            ct = $('#txt').val();
+            console.log(ct);
+            $('#travel').append("<li>"+ct+"</li>")
+        })
+
+        // function addList() {
+        //     var content = $('#txt').val();
+        //     $('#travel').append("<li>"+content+"</li>");
+        //     $('#txt').val('');
+        // }
+
+    </script>
+    
+</body>
+</html>
