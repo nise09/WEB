@@ -5,18 +5,109 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+                html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td,
+        article, aside, canvas, details, embed, 
+        figure, figcaption, footer, header, hgroup, 
+        menu, nav, output, ruby, section, summary,
+        time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+        /* HTML5 display-role reset for older browsers */
+        article, aside, details, figcaption, figure, 
+        footer, header, hgroup, menu, nav, section {
+            display: block;
+        }
+        body {
+            line-height: 1;
+        }
+        ol, ul {
+            list-style: none;
+        }
+        blockquote, q {
+            quotes: none;
+        }
+        blockquote:before, blockquote:after,
+        q:before, q:after {
+            content: '';
+            content: none;
+        }
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+
+
+        #nbar{
+            position:relative;
+            left:0;
+            top:0;
+            border-bottom: 1px solid gray;
+            box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.1);
+            color:black;
+            width: 100%;
+            height: 50px;
+        }
+
+        #menu_list{
+           
+            list-style: none;
+            text-align: center;
+            display: flex;
+            
+        }
+        #menu_list > li {
+            padding: 10px;
+            margin: 0 auto;
+            line-height: 25px;
+            
+        }
+
+        #menu_list > li > a {
+            text-decoration: none;
+            font-size:18px;
+            font-weight: bold;
+        }
+        #menu_list > li > a:hover {
+            color:blue;
+        }
+
+    </style>
 </head>
 <body>
 
-    <div id="test"></div>
+    <section id="s1">
+        <header class="hd">
+            <nav id="nbar">
+                <ul id="menu_list">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Link1</a></li>
+                    <li><a href="#">Link2</a></li>
+                    <li><a href="#">Link3</a></li>
+                    <li><a href="#">Link4</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div>
+
+        </div>
+
+    </section>
     
-    <script>
-        
-       
-
-
-
-
-    </script>
 </body>
 </html>
