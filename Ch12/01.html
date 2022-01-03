@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+    <style>
+        *{}
+        body{margin:0px;}
+        #wrapper{}
+        header{height: 60px; border: 1px solid gray;}
+        content{display:flex; margin-top: 5px; justify-content: space-between; position:relative; left: 0px; top:0px;}
+        .contents{
+            width:48%;
+            border:1px solid gray;
+            height:700px;
+            margin:20px;
+            position:relative;
+            left:0px;
+            top:0px;
+        }
+       
+        .content img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        .menu1 {
+            position:absolute;
+            left:10px;
+            top:10px;
+        }
+        .menu span {
+            display: block;
+            width: 35px;
+            height: 3px;
+            background-color: gray;
+            margin:5px;
+        }
+        .submenu {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+
+        </header>
+        <content>
+            <div class="contet">
+                <div class="menu1">
+                    <span class="top"></span>
+                    <span class="middle"></span>
+                    <span class="bottom"></span>
+                </div>
+
+                <ul class="submenu">
+                    <li>메뉴1</li>
+                    <li>메뉴2</li>
+                    <li>메뉴3</li>
+                </ul>
+
+                <img src="https://img.ihanstyle.com/files/upload/display/202012/202012181442191.jpg" />
+            </div>
+            <div class="contents">
+
+            </div>
+            <div class="content">
+
+            </div>
+        </content>
+    </div>
+
+    <script>
+        var flag=false;
+        var zidx=9999;
+        var bg=$('<div class="bg"></div>');
+
+        bg.css('position','absolute')
+        .css('top','0px')
+        .css('left','0px')
+        .css('width','100%')
+        .css('height','100%')
+        .css('background-color','black')
+        .css('opacity','0.5')
+        .css('z-index',zidx)
+
+        $('.menu1').on('click',function(){
+            if(flag == flase) {
+                //햄버거 메뉴 모양변경
+                $('.top').css('transform,translte(0px,8px) roate(45deg)').css('transtion','0.3s');
+                $('.middle').css('opacity','0').css('transtion','0.3s');
+                $('.bottom').css('transform','translate(0px,-8px) rotate(-45deg)').css('transtion','0.3s');
+                //Contents에 백그라운드 추가
+                $(this).css('z-index',zidx+1);
+
+                //햄버거 span 백그라운드 흰색
+                $(this).children('span').css('background-color','white');
+
+                $(this).parent().append(bg);
+
+                $('.submenu').css('display','block')
+                .css('position','absolute')
+                .css('left','50px')
+                .css('top','100px')
+                .css('color','white')
+                .css('font-size','32px')
+                .css('font-weight','400px')
+                .css('padding','0px')
+                .css('opacity','1')
+                .css('z-index',zidx+1);
+
+
+                flag=true;
+            }else{
+                $('#top').css('transform,translte(0px,0px) roate(0deg)');
+                $('#middle').css('opacity','1');
+                $('#bottom').css('transform','translate(0px,0px) rotate(0deg)');
+
+                //백그라운드 제거
+                $(this).siblings('.bg').remove();
+
+                //햄버거 span백그라운드 회색
+                $(this).children('span').css('background-color','gray');
+                flag=false;
+
+                //submenu 제거하기
+                $('#submenu').css('opacity','0');
+            }
+        })
+    </script>
+    
+</body>
+</html>
