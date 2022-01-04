@@ -20,7 +20,7 @@
         .contents{
             width:48%;
            
-            border:1px solid gray;
+            /* border:1px solid gray; */
           
             margin:20px;
             position:relative;
@@ -45,10 +45,34 @@
             background-color: gray;
             margin:5px;
         }
+
+
+        .bg
+        {
+          position:absolute;
+          top:0px;
+          left:0px;
+          width:100%;
+          height:100%;
+          background-color:black;    
+          opacity:0;
+        }
         .submenu
         {
             display:none;
+            position:absolute;
+            left:80px;
+            top:100px;
+            color:white;
+            font-size:32px;
+            font-weight:400;
+            list-style:none;
+            padding:0px;
         }
+    
+
+        
+
     </style>
 </head>
 <body>
@@ -57,6 +81,7 @@
         <content>
             <div class=contents>
                 
+                <div class="bg"></div>
                 <div class="menu1">
                     <span class="top"></span>
                     <span class="middle"></span>
@@ -72,6 +97,7 @@
 
             <div class=contents>
                 
+                <div class="bg"></div>
                 <div class="menu1">
                     <span class="top"></span>
                     <span class="middle"></span>
@@ -84,20 +110,15 @@
                 </ul>
                 <img src=https://www.thombrowne.com/BWStaticContent/26000/86c220c2-c3d6-4e2a-b707-56a04a300d92_womens-desktop.jpg>                           
             </div>
+         
+                
+          
 
         </content>
         <script>
             var flag=false;
             var zidx=9999;
-            var bg=$('<div class="bg"></div>');
-            bg.css('position','absolute')
-            .css('top','0px')
-            .css('left','0px')
-            .css('width','100%')
-            .css('height','100%')
-            .css('background-color','black')
-            .css('opacity','0.5')
-            .css('z-index',zidx);
+         
             $('.menu1').on('click',function(){
                 if(flag==false)
                 {
@@ -113,20 +134,17 @@
                     $(this).children('span').css('background-color','white');
                     
                     //Contents에 백그라운드 추가
-                    $(this).parent().append(bg);
+                    $(this).siblings('.bg')
+                    .css('opacity','0.5')
+                    .css('z-index',zidx);
+
 
                     //Submenu 추가 하기
-                    $(this).siblings('.submenu').css('display','block')
-                    .css('position','absolute')
-                    .css('left','80px')
-                    .css('top','100px')
-                    .css('color','white')
-                    .css('font-size','32px')
-                    .css('font-weight','400')
-                    .css('list-style','none')
-                    .css('padding','0px')
-                    .css('z-index',zidx+1)
+                    $(this).siblings('.submenu')
+                    .css('display','block')
                     .css('opacity','1')
+                    .css('z-index',zidx+1);
+                   
                     flag=true;
                 }else
                 {
@@ -136,7 +154,7 @@
                     $(this).children('.bottom').css('transform','translate(0px,0px) rotate(0deg)');
                     
                     //백그라운드 제거
-                    $(this).siblings('.bg').remove();
+                    $(this).siblings('.bg').css('opacity','0');
 
                     //햄버거 span 백그라운드 회색
                     $(this).children('span').css('background-color','gray');
