@@ -13,35 +13,36 @@
 <body>
 
     <section id="wrapper">
-        
-            
-
-        <div id="box1" class="row" style="width: 500px; height: 500px; margin:200px auto; border:1px solid gray;">
-            <div id="icon" style="text-align: center;">
-                <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" fill="currentColor" class="bi bi-person-check-fill" viewBox="0 0 16 16">
+        <div id="box1" class="row" style="width: 500px; height: 500px; margin:100px auto; border:1px solid gray;">
+            <div id="icon" style="text-align: center;" class=" col">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-person-check-fill" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M15.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L12.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
                     <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
                 </svg>
             </div>
 
             <div id="input_tg">
-                <p>Email</p>
-                <input type="text" placeholder="example@example.com" class="col-12 form-control">
-                <p>Password</p>
+                <label class="form-label">Email</label>
+                <input type="text" placeholder="example@example.com" class="col-12 form-control" style="margin-bottom:5px;">
+                <label class="form-label">Password</label>
                 <input type="password" placeholder="Password" class="col-12 form-control">
             </div>
 
-            <div id="checkbox_tg" style="display:flex; margin-left:80px;">
-                <input type="checkbox" class="form-check-input col-2">
-                <label class="form-check-label col-4">아이디 저장</label>
-                <input type="checkbox" class="form-check-input col-2">
-                <label class="form-check-label col-4">패스워드 저장</label>
+            <div id="checkbox_tg" style="display:flex;  ">
+                <div class="col-md-6" >
+                    <input type="checkbox" class="form-check-input ">
+                    <label class="form-check-label " >아이디 저장</label>
+                </div>
+                <div class="col-md-6" style="margin-left: 100px;">
+                    <input type="checkbox" class="form-check-input ">
+                    <label class="form-check-label ">패스워드 저장</label>
+                </div>
             </div>
 
             <div id="btn_tg">
-                <button id="S" class="btn btn-primary form-control col-12" style="margin:10px auto;">Sign in</button>
+                <button type="submit" id="S" class="btn btn-primary form-control col-12" style="margin:15px auto;" value="login">Sign in</button>
                 
-                <button id="S" class="btn btn-secondary form-control col-12">Member Join</button>
+                <button type="button" id="S" class="btn btn-secondary form-control col-12">Member Join</button>
             </div>
 
         </div>
